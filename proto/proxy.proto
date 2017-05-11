@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package proto;
+
+message WeedFileRequest {
+	string Fid = 1;
+}
+
+message WeedFileResponse {
+	string FileContent = 1;
+}
+
+service WeedProxy {
+	rpc GetFileContent(WeedFileRequest) returns (WeedFileResponse){}
+}
